@@ -12,6 +12,17 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'jquery-rails'
+gem 'devise-bootstrap-views'
+gem 'figaro'
+gem 'braintree'
+gem "gritter", "1.2.0"
+gem "carrierwave"
+gem "mini_magick"
+gem 'fog-aws'
+gem 'masonry-rails'
+gem 'warden'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

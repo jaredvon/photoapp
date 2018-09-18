@@ -1,0 +1,35 @@
+<div id="fileuploader">Upload</div>
+
+<script>
+$(document).ready(function()
+{
+	$("#fileuploader").uploadFile({
+	url:"<%= j(images_path)%>",
+	fileName:"myfile",
+	method:"POST",
+	maxFileSize: <%= j(set_file_size) %>,
+	dragdropWidth:"100%"
+	});
+	
+});
+    
+</script>
+
+<div id="container" data-room="<%= current_user.id %>" class="transitions-enabled centered clearfix masonry" align="center">
+  <% @images.each do |image|%>
+      <%= image_tag image.image_url,style:"width:30%"%>
+  <% end %>
+</div>
+
+<script>
+  $(function(){
+
+  $('#masonry-container').masonry({
+    itemSelector: '.box',
+    columnWidth: 100,
+    isAnimated: !Modernizr.csstransitions,
+    isRTL: true
+  });
+
+});
+</script>
